@@ -1,4 +1,4 @@
-#include <stdio.h>  // ✅ แก้ชื่อ header จาก stduio.h เป็น stdio.h
+#include <stdio.h> 
 
 int main() {
     char Name[50];
