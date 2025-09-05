@@ -8,7 +8,7 @@ int main() {
 
     for (int i = n; i >= 2; i--) {       // นับจาก n ลงมาถึง 2
         int isPrime = 1;                 // สมมติว่าเป็นจำนวนเฉพาะ
-        for (int j = 2; j * j <= i; j++) {
+        for (int j = 2; j < i; j++) {
             if (i % j == 0) {
                 isPrime = 0;
                 break;
