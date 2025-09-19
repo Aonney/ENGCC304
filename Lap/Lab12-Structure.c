@@ -2,15 +2,15 @@
 #include <string.h>
 
 // กำหนดโครงสร้างข้อมูล
-typedef struct Student {
-    char Name[50];
-    char ID[10];
-    float ScoreSub1;
-    float ScoreSub2;
-    float ScoreSub3;
-    float ScoreSub4;
-    float ScoreSub5;
-} S;
+struct Student {
+    char Name[20] ;
+    char ID[5] ;
+    float ScoreSub1 ;
+    float ScoreSub2 ;
+    float ScoreSub3 ;
+    float ScoreSub4 ;
+    float ScoreSub5 ;
+} typedef S ;
 
 // ฟังก์ชันคืนค่าเกรดตามคะแนน
 const char* getGrade(float score) {
@@ -80,4 +80,3 @@ int main() {
 
     return 0;
 }
-
