@@ -1,0 +1,275 @@
+<mxGraphModel dx="820" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <!-- 1. Start -->
+    <mxCell id="2" value="เริ่มต้น" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="140" y="20" width="80" height="40" as="geometry" />
+    </mxCell>
+    <!-- 2. Process: Init Vars -->
+    <mxCell id="3" value="ประกาศตัวแปร N, i" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="120" y="80" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="60" as="sourcePoint" />
+        <mxPoint x="180" y="80" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 3. Output: Prompt -->
+    <mxCell id="5" value="แสดงข้อความ &quot;Enter value:&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="100" y="140" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="120" as="sourcePoint" />
+        <mxPoint x="180" y="140" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 4. Input: N -->
+    <mxCell id="7" value="รับค่า N" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="120" y="200" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="7">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="180" as="sourcePoint" />
+        <mxPoint x="180" y="200" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 5. Condition 1: Error Check (scanf != 1) -->
+    <mxCell id="9" value="รับค่า N สำเร็จ หรือไม่&lt;br&gt;(scanf == 1)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="110" y="280" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="9">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="240" as="sourcePoint" />
+        <mxPoint x="180" y="280" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 5.1 Error Path (False/Failed) -->
+    <mxCell id="11" value="แสดงข้อความ &quot;Invalid input.&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="320" y="280" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="12" value="เท็จ" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=classic;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="11">
+      <mxGeometry x="0.1032" y="5" relative="1" as="geometry">
+        <mxPoint x="250" y="310" as="sourcePoint" />
+        <mxPoint x="320" y="310" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="280" y="310" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="13" value="คืนค่า 1 (โปรแกรมจบ)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="360" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="13">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="390" y="320" as="sourcePoint" />
+        <mxPoint x="390" y="360" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="15" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="350" y="440" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="15">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="390" y="400" as="sourcePoint" />
+        <mxPoint x="390" y="440" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 5.2 Success Path (True/Success) -->
+    <mxCell id="17" value="แสดงข้อความ &quot;Series: &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="100" y="380" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="18" value="จริง" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=top;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="17">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="340" as="sourcePoint" />
+        <mxPoint x="180" y="380" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6. Condition 2: Parity Check (N % 2 != 0) -->
+    <mxCell id="19" value="N เป็นเลขคี่หรือไม่&lt;br&gt;(N % 2 != 0)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="110" y="460" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="19">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="420" as="sourcePoint" />
+        <mxPoint x="180" y="460" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.1 True Path (Odd Number) -->
+    <mxCell id="21" value="กำหนดค่าเริ่มต้น i = 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="120" y="540" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="22" value="จริง" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="19" target="21">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="520" as="sourcePoint" />
+        <mxPoint x="180" y="540" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.1.1 Loop Condition (i <= N) -->
+    <mxCell id="23" value="i &lt;= N" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="120" y="610" width="120" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="24" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="21" target="23">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="580" as="sourcePoint" />
+        <mxPoint x="180" y="610" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.1.1.1 Loop True Path (i <= N) -->
+    <mxCell id="25" value="แสดงค่า i" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="120" y="700" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="26" value="จริง" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="23" target="25">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="670" as="sourcePoint" />
+        <mxPoint x="180" y="700" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="27" value="อัปเดตค่า i = i + 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="120" y="760" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="28" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="25" target="27">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="180" y="740" as="sourcePoint" />
+        <mxPoint x="180" y="760" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="29" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="27" target="23">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="100" y="780" as="sourcePoint" />
+        <mxPoint x="100" y="640" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="80" y="780" />
+          <mxPoint x="80" y="640" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.1.1.2 Loop False Path (i > N) -->
+    <mxCell id="30" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="23">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="240" y="640" as="sourcePoint" />
+        <mxPoint x="500" y="640" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="500" y="640" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="31" value="เท็จ" style="html=1;align=center;verticalAlign=bottom;" vertex="1" parent="30">
+      <mxGeometry x="-0.4" y="0" relative="1" as="geometry">
+        <mxPoint x="10" y="-10" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.2 False Path (Even Number) -->
+    <mxCell id="32" value="กำหนดค่าเริ่มต้น i = N" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="540" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="33" value="เท็จ" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="19" target="32">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="250" y="490" as="sourcePoint" />
+        <mxPoint x="320" y="540" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="280" y="490" />
+          <mxPoint x="280" y="540" />
+          <mxPoint x="380" y="540" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.2.1 Loop Condition (i >= 0) -->
+    <mxCell id="34" value="i &gt;= 0" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="610" width="120" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="35" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="32" target="34">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="380" y="580" as="sourcePoint" />
+        <mxPoint x="380" y="610" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.2.1.1 Loop True Path (i >= 0) -->
+    <mxCell id="36" value="แสดงค่า i" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="320" y="700" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="37" value="จริง" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="34" target="36">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="380" y="670" as="sourcePoint" />
+        <mxPoint x="380" y="700" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="38" value="อัปเดตค่า i = i - 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="760" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="39" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="36" target="38">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="380" y="740" as="sourcePoint" />
+        <mxPoint x="380" y="760" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="40" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="38" target="34">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="460" y="780" as="sourcePoint" />
+        <mxPoint x="480" y="640" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="480" y="780" />
+          <mxPoint x="480" y="640" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- 6.2.1.2 Loop False Path (i < 0) -->
+    <mxCell id="41" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="34" target="30">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="320" y="640" as="sourcePoint" />
+        <mxPoint x="240" y="640" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="280" y="640" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="42" value="เท็จ" style="html=1;align=center;verticalAlign=bottom;" vertex="1" parent="41">
+      <mxGeometry x="0.4" y="0" relative="1" as="geometry">
+        <mxPoint x="-10" y="-10" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 7. Merge Point (30 & 41 target) and Nextline Output -->
+    <mxCell id="43" value="แสดงผลขึ้นบรรทัดใหม่" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="430" y="860" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="44" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="30" target="43">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="500" y="640" as="sourcePoint" />
+        <mxPoint x="500" y="860" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="500" y="800" />
+          <mxPoint x="500" y="800" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- 8. Process: Return 0 -->
+    <mxCell id="45" value="คืนค่า 0 (โปรแกรมจบ)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="430" y="940" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="46" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="43" target="45">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="500" y="900" as="sourcePoint" />
+        <mxPoint x="500" y="940" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- 9. Stop -->
+    <mxCell id="47" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="460" y="1020" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="48" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="45" target="47">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="500" y="980" as="sourcePoint" />
+        <mxPoint x="500" y="1020" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- Connect Error Path to Final Stop -->
+    <mxCell id="49" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="15">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="390" y="400" as="sourcePoint" />
+        <mxPoint x="390" y="440" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
