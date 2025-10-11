@@ -1,0 +1,355 @@
+<mxGraphModel dx="1295" dy="3764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Program Main: main() -->
+    <mxCell id="M1" value="เริ่มต้น (Start)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="135" y="40" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M2" value="Process: ประกาศ/กำหนดค่าเริ่มต้นตัวแปร&#10;- arr = { 15, 7, ... }&#10;- n = 7 (ขนาดอาเรย์)&#10;- target_value = 32&#10;- target_position = -1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="100" y="110" width="190" height="70" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M3" value="Output: &quot;Old Series : &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="120" y="210" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M4" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="120" y="280" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop 1: Display Old Series -->
+    <mxCell id="M5" value="Condition: i &lt; n ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="155" y="340" width="80" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M6" value="Output: แสดง arr[i]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="270" y="350" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M7" value="Condition: i &lt; n - 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="420" y="340" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M8" value="Output: แสดง &quot;, &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="550" y="350" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M9" value="Process: i = i + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="440" y="440" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M10" value="Output: ขึ้นบรรทัดใหม่ (&quot;\n&quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="120" y="440" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop 2 (Outer Bubble Sort) -->
+    <mxCell id="M11" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="120" y="520" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M12" value="Condition: i &lt; n - 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="145" y="580" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M13" value="Process: swapped = false" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="270" y="590" width="130" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M14" value="Process: j = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="430" y="590" width="130" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop 3 (Inner Bubble Sort) -->
+    <mxCell id="M15" value="Condition: j &lt; n - i - 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="450" y="680" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M16" value="Condition: arr[j] &gt; arr[j+1] ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="610" y="680" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M17" value="Process: สลับค่า (Swap) arr[j] &lt;--&gt; arr[j+1]" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="760" y="665" width="140" height="50" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M18" value="Process: swapped = true" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="760" y="730" width="140" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M19" value="Process: j = j + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="630" y="790" width="100" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- End Loop 3 -->
+    <mxCell id="M20" value="Condition: swapped == false ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="270" y="710" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M21" value="Process: i = i + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="145" y="710" width="100" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Jump Target for break (End Sort) -->
+    <mxCell id="M_SortEnd" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="190" y="790" width="10" height="10" as="geometry" />
+    </mxCell>
+    
+    <!-- Display New Series -->
+    <mxCell id="M22" value="Output: &quot;New Series : &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="120" y="850" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M23" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="120" y="920" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop 4: Display New Series -->
+    <mxCell id="M24" value="Condition: i &lt; n ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="155" y="980" width="80" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M25" value="Output: แสดง arr[i]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="270" y="990" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M26" value="Condition: i &lt; n - 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="420" y="980" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M27" value="Output: แสดง &quot;, &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="550" y="990" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M28" value="Process: i = i + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="440" y="1080" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M29" value="Output: ขึ้นบรรทัดใหม่ (&quot;\n&quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="120" y="1080" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop 5: Find Position -->
+    <mxCell id="M30" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="120" y="1160" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M31" value="Condition: i &lt; n ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="155" y="1220" width="80" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M32" value="Condition: arr[i] == target_value ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="270" y="1220" width="140" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M33" value="Process: target_position = i + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="440" y="1230" width="140" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Jump Target for break (End Find Position) -->
+    <mxCell id="M_FindEnd" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="190" y="1320" width="10" height="10" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M34" value="Process: i = i + 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="145" y="1380" width="100" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- Final Output Check -->
+    <mxCell id="M35" value="Condition: target_position != -1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="135" y="1460" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M36" value="Output: แสดง &quot;Pos of 32 : ตำแหน่งที่พบ&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="270" y="1470" width="180" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M37" value="Output: แสดง &quot;Pos of 32 : Not found&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="120" y="1560" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M38" value="Process: คืนค่า 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="135" y="1640" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M39" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="135" y="1720" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Connectors -->
+    <mxCell id="C1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M1" target="M2" />
+    <mxCell id="C2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M2" target="M3" />
+    <mxCell id="C3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M3" target="M4" />
+    <mxCell id="C4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M4" target="M5" />
+    
+    <!-- Loop 1 Flow (Display Old) -->
+    <mxCell id="C5" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M5" target="M6" />
+    <mxCell id="C6" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M6" target="M7" />
+    <mxCell id="C7" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M7" target="M8" />
+    <mxCell id="C8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="M8" target="M9" />
+    <mxCell id="C9" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M7" target="M9">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="470" y="420" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="470" y="420" />
+          <mxPoint x="470" y="420" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M9" target="M5">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="515" y="325" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="590" y="455" />
+          <mxPoint x="590" y="300" />
+          <mxPoint x="195" y="300" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C11" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;align=right;verticalAlign=top;" edge="1" parent="1" source="M5" target="M10" />
+    <mxCell id="C12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M10" target="M11" />
+    <mxCell id="C13" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M11" target="M12" />
+    
+    <!-- Loop 2 Flow (Outer Bubble Sort) -->
+    <mxCell id="C14" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M12" target="M13" />
+    <mxCell id="C15" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M13" target="M14" />
+    <mxCell id="C16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M14" target="M15" />
+    
+    <!-- Loop 3 Flow (Inner Bubble Sort) -->
+    <mxCell id="C17" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M15" target="M16" />
+    <mxCell id="C18" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M16" target="M17" />
+    <mxCell id="C19" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M17" target="M18" />
+    <mxCell id="C20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M18" target="M19" />
+    <mxCell id="C21" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;align=right;verticalAlign=top;" edge="1" parent="1" source="M16" target="M19">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="670" y="770" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C22" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M19" target="M15">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="500" y="780" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="730" y="805" />
+          <mxPoint x="730" y="650" />
+          <mxPoint x="500" y="650" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- End Loop 3 -->
+    <mxCell id="C23" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;align=right;verticalAlign=top;" edge="1" parent="1" source="M15" target="M20" />
+    
+    <!-- Loop 2 Exit Check -->
+    <mxCell id="C24" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="M20" target="M_SortEnd">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="200" y="740" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C25" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M20" target="M21" />
+    <mxCell id="C26" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M21" target="M12">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="200" y="550" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="195" y="550" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- End Loop 2 -->
+    <mxCell id="C27" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M12" target="M_SortEnd">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="200" y="700" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="200" y="700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C28" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M_SortEnd" target="M22" />
+    <mxCell id="C29" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M22" target="M23" />
+    <mxCell id="C30" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M23" target="M24" />
+    
+    <!-- Loop 4 Flow (Display New) -->
+    <mxCell id="C31" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M24" target="M25" />
+    <mxCell id="C32" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M25" target="M26" />
+    <mxCell id="C33" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M26" target="M27" />
+    <mxCell id="C34" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="M27" target="M28" />
+    <mxCell id="C35" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M26" target="M28">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="470" y="1060" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="470" y="1060" />
+          <mxPoint x="470" y="1060" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C36" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M28" target="M24">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="515" y="965" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="590" y="1095" />
+          <mxPoint x="590" y="950" />
+          <mxPoint x="195" y="950" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C37" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;align=right;verticalAlign=top;" edge="1" parent="1" source="M24" target="M29" />
+    <mxCell id="C38" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M29" target="M30" />
+    <mxCell id="C39" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M30" target="M31" />
+    
+    <!-- Loop 5 Flow (Find Position) -->
+    <mxCell id="C40" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M31" target="M32" />
+    <mxCell id="C41" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M32" target="M33" />
+    <mxCell id="C42" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M33" target="M_FindEnd">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="510" y="1300" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="510" y="1300" />
+          <mxPoint x="200" y="1300" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C43" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;align=right;verticalAlign=top;" edge="1" parent="1" source="M32" target="M34">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="340" y="1350" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="340" y="1350" />
+          <mxPoint x="200" y="1350" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C44" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M34" target="M31">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="200" y="1200" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- End Loop 5 -->
+    <mxCell id="C45" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M31" target="M_FindEnd" />
+    <mxCell id="C46" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M_FindEnd" target="M35" />
+    
+    <!-- Final Output Check -->
+    <mxCell id="C47" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;align=left;verticalAlign=bottom;" edge="1" parent="1" source="M35" target="M36" />
+    <mxCell id="C48" value="เท็จ" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="M35" target="M37">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="120" y="1490" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="120" y="1490" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C49" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M36" target="M38">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="360" y="1610" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="360" y="1660" />
+          <mxPoint x="195" y="1660" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C50" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M37" target="M38" />
+    <mxCell id="C51" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M38" target="M39" />
+  </root>
+</mxGraphModel>
