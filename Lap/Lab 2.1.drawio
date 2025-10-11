@@ -2,133 +2,241 @@
   <root>
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
+    
+    <!-- Start -->
     <mxCell id="2" value="เริ่มต้น" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
       <mxGeometry x="375" y="20" width="100" height="40" as="geometry" />
     </mxCell>
     
-    <mxCell id="3" value="เตรียมวัตถุดิบ&lt;br&gt;(หมูกรอบ/ใบกระเพรา/พริก/กระเทียม/ไข่เยี่ยวม้า)" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="340" y="90" width="170" height="50" as="geometry" />
+    <!-- Process: Initialization -->
+    <mxCell id="3" value="ประกาศตัวแปรและกำหนดค่าเริ่มต้น:&lt;br&gt;is_crispy_pork_ready = False&lt;br&gt;is_taste_ok = False" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="310" y="90" width="230" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="4" value="ตวงเครื่องปรุงและเตรียมอุปกรณ์ครัว&lt;br&gt;(จาน ช้อน ตะหลิว กระทะ)" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="330" y="170" width="190" height="50" as="geometry" />
+    <!-- Output: Step 1 Introduction & Sub-steps (Combined) -->
+    <mxCell id="4" value="แสดงผล:&lt;br&gt;ข้อความเริ่มต้น และ&lt;br&gt;ขั้นตอนที่ 1 (1.1, 1.2, 1.3)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="325" y="190" width="200" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="5" value="ตักข้าวสวยใส่จานเตรียมไว้" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="350" y="250" width="150" height="40" as="geometry" />
+    <!-- Output: Step 2 Introduction -->
+    <mxCell id="5" value="แสดงผล:&lt;br&gt;ขั้นตอนที่ 2: การปรุง..." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="340" y="290" width="170" height="50" as="geometry" />
     </mxCell>
     
-    <mxCell id="6" value="หมูกรอบพร้อมใช้แล้ว&lt;br&gt;(หั่นชิ้นเรียบร้อย)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-      <mxGeometry x="340" y="320" width="170" height="80" as="geometry" />
+    <!-- Condition 1: is_crispy_pork_ready (IF) -->
+    <mxCell id="6" value="is_crispy_pork_ready&lt;br&gt;เป็นจริง ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="370" y="380" width="110" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="7" value="ทอดหมูสามชั้นให้กรอบ&lt;br&gt;แล้วหั่นเป็นชิ้นพอดีคำ" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="560" y="330" width="150" height="60" as="geometry" />
+    <!-- True Branch (IF) -->
+    <mxCell id="7" value="แสดงผล: 2.1 (ใช่) หมูกรอบพร้อมแล้ว!" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="200" y="390" width="150" height="50" as="geometry" />
     </mxCell>
     
-    <mxCell id="8" value="นำไข่เยี่ยวม้าลงทอดในน้ำมันร้อน&lt;br&gt;ตักพักไว้เมื่อกรอบนอกนุ่มใน" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="330" y="440" width="190" height="60" as="geometry" />
+    <!-- False Branch (ELSE) -->
+    <mxCell id="8" value="แสดงผล: 2.1 (ไม่) และ&lt;br&gt;แสดงวิธีทอดหมูสามชั้นให้กรอบ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="510" y="380" width="200" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="9" value="ตำ/สับพริกกับกระเทียม&lt;br&gt;แล้วนำไปผัดกับน้ำมันจนหอม" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="340" y="540" width="170" height="60" as="geometry" />
+    <!-- Merge IF/ELSE -->
+    <mxCell id="9" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;" vertex="1" parent="1">
+      <mxGeometry x="420" y="500" width="10" height="10" as="geometry" />
     </mxCell>
     
-    <mxCell id="10" value="ใส่หมูกรอบและไข่เยี่ยวม้าที่ทอดแล้วลงไป&lt;br&gt;ปรุงรสด้วยน้ำปลา น้ำตาล ซีอิ๊ว" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="320" y="640" width="210" height="60" as="geometry" />
+    <!-- Output: Process 2.2 (Egg) -->
+    <mxCell id="10" value="แสดงผล: 2.2 &lt;br&gt;ทอดไข่เยี่ยวม้า" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="360" y="540" width="130" height="50" as="geometry" />
     </mxCell>
     
-    <mxCell id="11" value="รสชาติ&lt;br&gt;ถูกปากแล้ว" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-      <mxGeometry x="375" y="740" width="100" height="60" as="geometry" />
+    <!-- Output: Step 3 Introduction & Sub-steps 3.1, 3.2 (Combined) -->
+    <mxCell id="11" value="แสดงผล:&lt;br&gt;ขั้นตอนที่ 3: การปรุง...&lt;br&gt;3.1 (ผัดพริกกระเทียม) &amp; 3.2 (ปรุงรสหลัก)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="315" y="620" width="220" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="12" value="เติมเครื่องปรุง/น้ำเปล่าเล็กน้อย&lt;br&gt;ผัดต่อจนได้รสที่ต้องการ" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="210" y="740" width="140" height="60" as="geometry" />
+    <!-- Loop Start (DO-WHILE) -->
+    <mxCell id="12" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;" vertex="1" parent="1">
+      <mxGeometry x="420" y="730" width="10" height="10" as="geometry" />
     </mxCell>
     
-    <mxCell id="13" value="ใส่ใบกระเพรากรอบ&lt;br&gt;ผัดเร็ว ๆ แล้วปิดไฟ" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="350" y="840" width="150" height="40" as="geometry" />
+    <!-- Inner Condition 2 (IF inside DO) -->
+    <mxCell id="13" value="is_taste_ok&lt;br&gt;เป็นจริง ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="370" y="770" width="110" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="14" value="ตักผัดกระเพราใส่จานข้าวสวย&lt;br&gt;พร้อมเสิร์ฟ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-      <mxGeometry x="340" y="920" width="170" height="50" as="geometry" />
+    <!-- Inner True Branch (IF) -->
+    <mxCell id="14" value="แสดงผล: 3.3 (ใช่) รสชาติถูกปากแล้ว!" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="200" y="780" width="150" height="50" as="geometry" />
     </mxCell>
     
-    <mxCell id="15" value="สิ้นสุด" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
-      <mxGeometry x="375" y="1000" width="100" height="40" as="geometry" />
+    <!-- Inner False Branch (ELSE) -->
+    <mxCell id="15" value="แสดงผล: 3.3 (ไม่) และ&lt;br&gt;แสดงวิธีปรุงเพิ่ม" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="510" y="770" width="200" height="70" as="geometry" />
     </mxCell>
     
-    <mxCell id="16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
+    <!-- Process: is_taste_ok = true (Inside ELSE) -->
+    <mxCell id="16" value="is_taste_ok = True" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="540" y="870" width="140" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Merge Inner IF/ELSE -->
+    <mxCell id="17" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;" vertex="1" parent="1">
+      <mxGeometry x="420" y="930" width="10" height="10" as="geometry" />
+    </mxCell>
+    
+    <!-- Loop Condition (WHILE) -->
+    <mxCell id="18" value="!is_taste_ok &lt;br&gt;(ยังไม่ถูกปาก) ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="370" y="970" width="110" height="70" as="geometry" />
+    </mxCell>
+    
+    <!-- Output: Process 3.4 (Basil) -->
+    <mxCell id="19" value="แสดงผล: 3.4 &lt;br&gt;ใส่ใบกระเพราแล้วปิดไฟ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1070" width="170" height="50" as="geometry" />
+    </mxCell>
+    
+    <!-- Output: End message (Combined) -->
+    <mxCell id="20" value="แสดงผล: &lt;br&gt;ข้อความสิ้นสุด และ&lt;br&gt;4. ตักใส่จานพร้อมเสิร์ฟ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="325" y="1150" width="200" height="70" as="geometry" />
+    </mxCell>
+    
+    <!-- Process: Return 0 -->
+    <mxCell id="21" value="คืนค่า 0 (Return 0)" style="process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="360" y="1250" width="130" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Stop -->
+    <mxCell id="22" value="สิ้นสุด" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="375" y="1330" width="100" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Connections -->
+    <mxCell id="23" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="17" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="3" target="4">
+    <mxCell id="24" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="3" target="4">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="18" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
+    <mxCell id="25" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="5" target="6">
+    <mxCell id="26" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="5" target="6">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
     
-    <mxCell id="20" value="ใช่" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="8">
-      <mxGeometry width="50" height="50" relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="21" value="ไม่" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="7">
+    <!-- C1 IF/ELSE Flow -->
+    <mxCell id="27" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="7">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="510" y="360" as="sourcePoint" />
-        <mxPoint x="590" y="360" as="targetPoint" />
+        <mxPoint x="370" y="415" as="sourcePoint" />
+        <mxPoint x="370" y="490" as="targetPoint" />
       </mxGeometry>
     </mxCell>
-    <mxCell id="22" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="7" target="8">
+    <mxCell id="28" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="8">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="635" y="390" as="sourcePoint" />
-        <mxPoint x="425" y="440" as="targetPoint" />
+        <mxPoint x="490" y="415" as="sourcePoint" />
+        <mxPoint x="490" y="490" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="29" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="7" target="9">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="275" y="440" as="sourcePoint" />
+        <mxPoint x="275" y="500" as="targetPoint" />
         <Array as="points">
-          <mxPoint x="635" y="420" />
-          <mxPoint x="425" y="420" />
+          <mxPoint x="275" y="505" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="30" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="8" target="9">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="610" y="450" as="sourcePoint" />
+        <mxPoint x="610" y="500" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="610" y="505" />
         </Array>
       </mxGeometry>
     </mxCell>
     
-    <mxCell id="23" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="8" target="9">
+    <!-- Flow after C1 -->
+    <mxCell id="31" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="9" target="10">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="24" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="9" target="10">
+    <mxCell id="32" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="10" target="11">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="25" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="10" target="11">
+    <mxCell id="33" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="11" target="12">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
     
-    <mxCell id="26" value="ไม่" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="11" target="12">
+    <!-- C2 DO-WHILE Loop Flow -->
+    <mxCell id="34" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="12" target="13">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- Inner IF/ELSE Flow -->
+    <mxCell id="35" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="13" target="14">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="375" y="770" as="sourcePoint" />
-        <mxPoint x="350" y="770" as="targetPoint" />
+        <mxPoint x="370" y="805" as="sourcePoint" />
+        <mxPoint x="370" y="870" as="targetPoint" />
       </mxGeometry>
     </mxCell>
-    <mxCell id="27" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="12">
+    <mxCell id="36" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="13" target="15">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="350" y="800" as="sourcePoint" />
-        <mxPoint x="375" y="770" as="targetPoint" />
+        <mxPoint x="490" y="805" as="sourcePoint" />
+        <mxPoint x="490" y="870" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- Process in ELSE branch -->
+    <mxCell id="37" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="15" target="16">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- Merge Inner IF/ELSE -->
+    <mxCell id="38" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="14" target="17">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="275" y="830" as="sourcePoint" />
+        <mxPoint x="275" y="935" as="targetPoint" />
         <Array as="points">
-          <mxPoint x="280" y="810" />
-          <mxPoint x="280" y="770" />
-          <mxPoint x="375" y="770" />
+          <mxPoint x="275" y="935" />
         </Array>
       </mxGeometry>
     </mxCell>
-    <mxCell id="28" value="ใช่" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="11" target="13">
+    <mxCell id="39" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="16" target="17">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="610" y="910" as="sourcePoint" />
+        <mxPoint x="610" y="935" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="610" y="935" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- Loop Check -->
+    <mxCell id="40" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="17" target="18">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="41" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0.5;" edge="1" parent="1" source="18" target="12">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="370" y="1005" as="sourcePoint" />
+        <mxPoint x="300" y="735" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="300" y="1005" />
+          <mxPoint x="300" y="735" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="42" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="18" target="19">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
     
-    <mxCell id="29" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="13" target="14">
+    <!-- Final Flow -->
+    <mxCell id="43" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="19" target="20">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="30" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="14" target="15">
+    <mxCell id="44" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="20" target="21">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="45" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="21" target="22">
       <mxGeometry width="50" height="50" relative="1" as="geometry" />
     </mxCell>
     
   </root>
 </mxGraphModel>
-```eof
