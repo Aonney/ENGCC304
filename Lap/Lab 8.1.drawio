@@ -1,0 +1,354 @@
+<mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <!-- ============================================== -->
+    <!-- FUNCTION: calculateBaseSalary(position) -->
+    <!-- ============================================== -->
+    <mxCell id="func_base_start" value="เริ่มต้น (CalculateBaseSalary)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="630" y="20" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_cond1" value="ตำแหน่ง = 1 (Junior)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="640" y="80" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_start" target="func_base_cond1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_ret1" value="คืนค่า 20000.00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="510" y="180" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow2" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond1" target="func_base_ret1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="640" y="110" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_cond2" value="ตำแหน่ง = 2 (Mid)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="640" y="170" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow3" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond1" target="func_base_cond2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_ret2" value="คืนค่า 35000.00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="650" y="270" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow4" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond2" target="func_base_ret2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_cond3" value="ตำแหน่ง = 3 (Senior)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="640" y="340" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow5" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond2" target="func_base_cond3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_ret3" value="คืนค่า 50000.00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="510" y="440" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow6" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond3" target="func_base_ret3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="640" y="370" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_ret_err" value="คืนค่า 0.00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="790" y="440" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow7" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_cond3" target="func_base_ret_err">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="780" y="370" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_merge" value="" style="rhombus;whiteSpace=wrap;html=1;shape=cross;size=20;" vertex="1" parent="1">
+      <mxGeometry x="700" y="520" width="20" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow_m1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_ret1" target="func_base_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="570" y="220" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="570" y="530" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_flow_m2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_ret2" target="func_base_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="710" y="310" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="710" y="490" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_flow_m3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_ret3" target="func_base_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="570" y="480" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="690" y="490" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_flow_m4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_ret_err" target="func_base_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="850" y="480" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="850" y="490" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_base_stop" value="จบ (คืนค่าเงินเดือนพื้นฐาน)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="640" y="570" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_base_flow_end" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_base_merge" target="func_base_stop">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- ============================================== -->
+    <!-- FUNCTION: calculateExperienceBonusRate(years) -->
+    <!-- ============================================== -->
+    <mxCell id="func_exp_start" value="เริ่มต้น (CalculateExperienceBonusRate)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="20" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_cond1" value="อายุงาน &lt; 1 ปี" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="80" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_start" target="func_exp_cond1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_ret1" value="คืนค่า 0.00 (0%)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="100" y="170" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow2" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_cond1" target="func_exp_ret1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_cond2" value="อายุงาน 1-3 ปี" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="170" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow3" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="func_exp_cond1" target="func_exp_cond2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="240" y="110" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="250" y="110" />
+          <mxPoint x="250" y="200" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_ret2" value="คืนค่า 0.10 (10%)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="290" y="270" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow4" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_cond2" target="func_exp_ret2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_cond3" value="อายุงาน 4-5 ปี" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="460" y="270" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow5" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="func_exp_cond2" target="func_exp_cond3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="430" y="200" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="440" y="200" />
+          <mxPoint x="440" y="300" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_ret3" value="คืนค่า 0.15 (15%)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="370" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow6" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_cond3" target="func_exp_ret3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_ret4" value="คืนค่า 0.20 (20%)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="650" y="370" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow7" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_cond3" target="func_exp_ret4">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="620" y="300" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="630" y="300" />
+          <mxPoint x="630" y="390" />
+          <mxPoint x="650" y="390" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_merge" value="" style="rhombus;whiteSpace=wrap;html=1;shape=cross;size=20;" vertex="1" parent="1">
+      <mxGeometry x="380" y="460" width="20" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow_m1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_ret1" target="func_exp_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="160" y="210" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="160" y="470" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_flow_m2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_ret2" target="func_exp_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="350" y="310" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="350" y="430" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_flow_m3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_ret3" target="func_exp_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="540" y="410" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="540" y="430" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_flow_m4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_ret4" target="func_exp_merge">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="710" y="410" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="710" y="470" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_exp_stop" value="จบ (คืนค่าอัตราโบนัส)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="510" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_exp_flow_end" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_exp_merge" target="func_exp_stop">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- ============================================== -->
+    <!-- MAIN FLOWCHART: main() -->
+    <!-- ============================================== -->
+    <mxCell id="main_start" value="เริ่มต้น (โปรแกรมหลัก)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="10" y="570" width="160" height="40" as="geometry" />
+    </mxCell>
+    <!-- Input Section -->
+    <mxCell id="main_input_pos" value="รับค่า ตำแหน่ง (Position)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="630" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_start" target="main_input_pos">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_input_year" value="รับค่า อายุงาน (Years)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="690" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_input_pos" target="main_input_year">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_input_proj" value="รับค่า จำนวนโปรเจค (Projects)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="750" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_input_year" target="main_input_proj">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- Position Validation (Simplified based on code structure) -->
+    <mxCell id="main_cond_pos_valid" value="Position อยู่ในช่วง 1-3 หรือไม่" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="20" y="820" width="140" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_input_proj" target="main_cond_pos_valid">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_output_error" value="แสดงข้อผิดพลาดและจบโปรแกรม" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="190" y="830" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_error" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_pos_valid" target="main_output_error">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="160" y="850" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_stop_error" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="210" y="900" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_error_stop" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_output_error" target="main_stop_error">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- Calculation Steps -->
+    <mxCell id="main_call_base" value="baseSalary = เรียกใช้ CalculateBaseSalary(Position)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="0" y="920" width="180" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow5" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_pos_valid" target="main_call_base">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="90" y="880" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_call_exp_rate" value="experienceRate = เรียกใช้ CalculateExperienceBonusRate(Years)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="0" y="980" width="180" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_call_base" target="main_call_exp_rate">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_calc_exp_bonus" value="experienceBonus = baseSalary * experienceRate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="0" y="1040" width="180" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_call_exp_rate" target="main_calc_exp_bonus">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- Special Bonus Logic -->
+    <mxCell id="main_init_special" value="specialBonus = 0.00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="250" y="1040" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_calc_exp_bonus" target="main_init_special">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="90" y="1080" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="90" y="1120" />
+          <mxPoint x="310" y="1120" />
+          <mxPoint x="310" y="1080" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_cond_special" value="Projects &gt; 5" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="1130" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow9" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_init_special" target="main_cond_special">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_calc_special" value="specialBonus = baseSalary * 0.05" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="100" y="1220" width="180" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow10" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_special" target="main_calc_special">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="270" y="1160" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="230" y="1160" />
+          <mxPoint x="230" y="1200" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_merge_special" value="" style="rhombus;whiteSpace=wrap;html=1;shape=cross;size=20;" vertex="1" parent="1">
+      <mxGeometry x="320" y="1220" width="20" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_calc_special" target="main_merge_special">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="190" y="1260" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="190" y="1280" />
+          <mxPoint x="330" y="1280" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_flow12" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_special" target="main_merge_special">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="370" y="1160" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="400" y="1160" />
+          <mxPoint x="400" y="1230" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- Final Calculation and Output -->
+    <mxCell id="main_calc_net" value="netSalary = baseSalary + experienceBonus + specialBonus" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="380" y="1300" width="240" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow13" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_merge_special" target="main_calc_net">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="330" y="1260" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="330" y="1320" />
+          <mxPoint x="380" y="1320" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_output_results" value="แสดงผล: Base Salary, Exp Bonus, Special Bonus, Net Salary" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="400" y="1360" width="200" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_calc_net" target="main_output_results">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_stop_success" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="450" y="1430" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow15" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_output_results" target="main_stop_success">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
