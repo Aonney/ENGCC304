@@ -1,0 +1,548 @@
+<mxGraphModel dx="1295" dy="10156" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="M1" value="เริ่มต้น (Start)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="340" y="40" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M2" value="Process: กำหนดค่าเริ่มต้น&#10;- Book library[100]&#10;- book_count = 0&#10;- choice" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="315" y="110" width="170" height="70" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M3" value="Function: displayMenu()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="340" y="210" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M4" value="Output: &quot;Choose an option: &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="340" y="280" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M5" value="Input: รับค่า choice" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="340" y="350" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M6" value="Condition: scanf(&quot;%d&quot;, &amp;choice) != 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="305" y="420" width="190" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M7" value="Output: &quot;Invalid input...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="540" y="430" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M8" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="720" y="430" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M9" value="Process: choice = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="900" y="430" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M10" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="340" y="520" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M11" value="Condition: choice?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="340" y="600" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M12" value="Function: addBook(library, &amp;count)" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="610" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M13" value="Process: char search_title[MAX_TITLE_LEN]" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="50" y="700" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M14" value="Output: &quot;Enter Title to Search: &quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="50" y="770" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M15" value="Input: รับ search_title ด้วย fgets" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="50" y="840" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M16" value="Condition: fgets() != NULL ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="50" y="910" width="160" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M17" value="Process: ลบอักขระ Newline ออกจาก search_title" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="250" y="920" width="180" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M18" value="Function: searchBook(library, count, search_title)" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="470" y="920" width="230" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M19" value="Function: displayBooks(library, count)" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="770" y="610" width="180" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M20" value="Output: &quot;Exiting the program...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="580" y="700" width="170" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M21" value="Output: &quot;Invalid choice...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="400" y="700" width="170" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M22" value="Condition: choice != 4 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1030" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M23" value="Process: คืนค่า 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1130" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="M24" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1200" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="C1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M1" target="M2" />
+    <mxCell id="C2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M2" target="M3" />
+    <mxCell id="C3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M3" target="M4" />
+    <mxCell id="C4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M4" target="M5" />
+    <mxCell id="C5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M5" target="M6" />
+    
+    <mxCell id="C6" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M6" target="M7" />
+    <mxCell id="C7" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M7" target="M8" />
+    <mxCell id="C8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M8" target="M9" />
+    <mxCell id="C9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M9" target="M3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="1080" y="450" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="1080" y="450" />
+          <mxPoint x="1080" y="190" />
+          <mxPoint x="400" y="190" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C10" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M6" target="M10" />
+    <mxCell id="C11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M10" target="M11" />
+    
+    <mxCell id="C12" value="Case 1" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="M11" target="M12">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="200" y="610" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="400" y="630" />
+          <mxPoint x="280" y="630" />
+          <mxPoint x="130" y="630" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M12" target="M22">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="130" y="1060" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="130" y="1060" />
+          <mxPoint x="400" y="1060" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C14" value="Case 2" style="endArrow=classic;html=1;exitX=0;exitY=0.5;" edge="1" parent="1" source="M11" target="M13">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="270" y="630" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="270" y="630" />
+          <mxPoint x="270" y="720" />
+          <mxPoint x="130" y="720" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C15" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M13" target="M14" />
+    <mxCell id="C16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M14" target="M15" />
+    <mxCell id="C17" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M15" target="M16" />
+    
+    <mxCell id="C18" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M16" target="M17" />
+    <mxCell id="C19" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M17" target="M18" />
+    <mxCell id="C20" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;" edge="1" parent="1" source="M16">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="130" y="1000" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="130" y="1000" />
+          <mxPoint x="130" y="1060" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C21" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M18" target="M22">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="585" y="1000" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="585" y="1000" />
+          <mxPoint x="585" y="1060" />
+          <mxPoint x="400" y="1060" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C22" value="Case 3" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="M11" target="M19">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="750" y="630" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="400" y="680" />
+          <mxPoint x="750" y="680" />
+          <mxPoint x="860" y="630" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C23" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="M19" target="M22">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="860" y="700" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="860" y="1000" />
+          <mxPoint x="400" y="1000" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C24" value="Case 4" style="endArrow=classic;html=1;exitX=0.5;exitY=1;" edge="1" parent="1" source="M11" target="M20">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="690" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="400" y="690" />
+          <mxPoint x="665" y="690" />
+          <mxPoint x="665" y="700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C25" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M20" target="M22">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="665" y="760" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="665" y="760" />
+          <mxPoint x="665" y="1000" />
+          <mxPoint x="400" y="1000" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C26" value="Default" style="endArrow=classic;html=1;exitX=0.5;exitY=1;" edge="1" parent="1" source="M11" target="M21">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="480" y="690" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="480" y="690" />
+          <mxPoint x="485" y="690" />
+          <mxPoint x="485" y="700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C27" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M21" target="M22">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="485" y="760" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="485" y="760" />
+          <mxPoint x="485" y="1000" />
+          <mxPoint x="400" y="1000" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="C28" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=0;" edge="1" parent="1" source="M22" target="M3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="240" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="310" y="1060" />
+          <mxPoint x="310" y="190" />
+          <mxPoint x="400" y="190" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="C29" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M22" target="M23" />
+    <mxCell id="C30" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M23" target="M24" />
+
+    <mxCell id="DM1" value="Function: displayMenu()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="295" y="1300" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DM2" value="Output: แสดงรายการเมนู 1 ถึง 4" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="270" y="1380" width="170" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DM3" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="295" y="1460" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DMC1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DM1" target="DM2" />
+    <mxCell id="DMC2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DM2" target="DM3" />
+
+    <mxCell id="CIB1" value="Function: clearInputBuffer()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="500" y="1300" width="150" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="CIB2" value="Process: int c = getchar()" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="515" y="1380" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="CIB3" value="Condition: c != '\n' AND c != EOF ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="475" y="1460" width="200" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="CIB4" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="515" y="1560" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="CIBC1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="CIB1" target="CIB2" />
+    <mxCell id="CIBC2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="CIB2" target="CIB3" />
+    <mxCell id="CIBC3" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=0;" edge="1" parent="1" source="CIB3" target="CIB2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="575" y="1400" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="450" y="1490" />
+          <mxPoint x="450" y="1400" />
+          <mxPoint x="575" y="1400" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="CIBC4" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="CIB3" target="CIB4" />
+
+    <mxCell id="AB1" value="Function: addBook()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="50" y="1300" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB2" value="Condition: *count &gt;= MAX_BOOKS ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1380" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="AB3" value="Output: &quot;Error: Library is full...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1390" width="170" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB4" value="Process: ประกาศ Book new_book" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1470" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB5" value="Input: รับ Book ID" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1540" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB6" value="Condition: scanf(&quot;%d&quot;, &amp;id) != 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1610" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="AB7" value="Output: &quot;Invalid ID...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1620" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB8" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="370" y="1620" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB9" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1710" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB10" value="Input: รับ Title (fgets + ลบ newline)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1780" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB11" value="Input: รับ Author (fgets + ลบ newline)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1850" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB12" value="Input: รับ Year" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6a329f;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1920" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB13" value="Condition: scanf(&quot;%d&quot;, &amp;year) != 1 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1990" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="AB14" value="Output: &quot;Invalid Year...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2000" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="AB15" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="370" y="2000" width="150" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB16" value="Function: clearInputBuffer()" style="shape=process;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="30" y="2090" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB17" value="Process: เพิ่ม new_book เข้าอาเรย์&#10;(*count)++" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="2160" width="160" height="50" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB18" value="Output: &quot;Book added successfully!&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="30" y="2240" width="160" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="AB19" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="50" y="2320" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="ABC1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB1" target="AB2" />
+    <mxCell id="ABC2" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AB2" target="AB3" />
+    <mxCell id="ABC3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB3" target="AB19" />
+    <mxCell id="ABC4" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB2" target="AB4" />
+    <mxCell id="ABC5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB4" target="AB5" />
+    <mxCell id="ABC6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB5" target="AB6" />
+    
+    <mxCell id="ABC7" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AB6" target="AB7" />
+    <mxCell id="ABC8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AB7" target="AB8" />
+    <mxCell id="ABC9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="AB8" target="AB5">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="500" y="1560" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="500" y="1560" />
+          <mxPoint x="110" y="1560" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="ABC10" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB6" target="AB9" />
+    
+    <mxCell id="ABC11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB9" target="AB10" />
+    <mxCell id="ABC12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB10" target="AB11" />
+    <mxCell id="ABC13" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB11" target="AB12" />
+    <mxCell id="ABC14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB12" target="AB13" />
+    
+    <mxCell id="ABC15" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AB13" target="AB14" />
+    <mxCell id="ABC16" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="AB14" target="AB15" />
+    <mxCell id="ABC17" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="AB15" target="AB12">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="500" y="1960" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="500" y="1940" />
+          <mxPoint x="110" y="1940" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="ABC18" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB13" target="AB16" />
+    
+    <mxCell id="ABC19" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB16" target="AB17" />
+    <mxCell id="ABC20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB17" target="AB18" />
+    <mxCell id="ABC21" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="AB18" target="AB19" />
+
+    <mxCell id="DB1" value="Function: displayBooks()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="720" y="1300" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB2" value="Condition: count == 0 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="700" y="1380" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="DB3" value="Output: &quot;Library is empty...&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="890" y="1390" width="170" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB4" value="Output: &quot;--- All Books... (%d books) ---&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="700" y="1470" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB5" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="700" y="1540" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB6" value="Condition: i &lt; count ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="700" y="1610" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="DB7" value="Output: แสดงข้อมูลหนังสือ books[i] ทั้งหมด" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="890" y="1620" width="170" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB8" value="Process: i++" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="1090" y="1620" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="DB9" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="720" y="1710" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="DBC1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB1" target="DB2" />
+    <mxCell id="DBC2" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="DB2" target="DB3" />
+    <mxCell id="DBC3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB3" target="DB9">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="975" y="1510" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="975" y="1510" />
+          <mxPoint x="780" y="1510" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="DBC4" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB2" target="DB4" />
+    <mxCell id="DBC5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB4" target="DB5" />
+    <mxCell id="DBC6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB5" target="DB6" />
+    
+    <mxCell id="DBC7" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="DB6" target="DB7" />
+    <mxCell id="DBC8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="DB7" target="DB8" />
+    <mxCell id="DBC9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="DB8" target="DB6">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="1130" y="1570" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="1130" y="1590" />
+          <mxPoint x="780" y="1590" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="DBC10" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="DB6" target="DB9" />
+
+    <mxCell id="SB1" value="Function: searchBook()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="100" y="2440" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB2" value="Process: found = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="95" y="2510" width="130" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB3" value="Output: &quot;--- Search Results for '%s' ---&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="50" y="2580" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB4" value="Process: i = 0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="95" y="2650" width="130" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB5" value="Condition: i &lt; count ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="85" y="2720" width="150" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="SB6" value="Function: compareCaseInsensitive(books[i].title, title) ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="270" y="2720" width="250" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="SB7" value="Output: แสดงข้อมูลหนังสือ books[i] ที่พบ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="560" y="2730" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB8" value="Process: found = 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="790" y="2730" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB9" value="Process: i++" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="270" y="2840" width="80" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="SB_Break" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="150" y="2840" width="10" height="10" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="SB10" value="Condition: !found (found == 0) ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="75" y="2910" width="180" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="SB11" value="Output: &quot;Book not found.&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="290" y="2920" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB12" value="Output: &quot;----------------------------------------&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="90" y="3010" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="SB13" value="สิ้นสุด (Stop)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a329f;fontColor=#ffffff;strokeColor=#371960;" vertex="1" parent="1">
+      <mxGeometry x="100" y="3090" width="120" height="40" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="SBC1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB1" target="SB2" />
+    <mxCell id="SBC2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB2" target="SB3" />
+    <mxCell id="SBC3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB3" target="SB4" />
+    <mxCell id="SBC4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB4" target="SB5" />
+    
+    <mxCell id="SBC5" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="SB5" target="SB6" />
+    <mxCell id="SBC6" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="SB6" target="SB7" />
+    <mxCell id="SBC7" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="SB7" target="SB8" />
+    <mxCell id="SBC8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB8" target="SB_Break">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="850" y="2800" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="850" y="2875" />
+          <mxPoint x="155" y="2875" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="SBC9" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB6" target="SB9" />
+    <mxCell id="SBC10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="SB9" target="SB5">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="2700" as="sourcePoint" />
+        <Array as="points">
+          <mxPoint x="310" y="2700" />
+          <mxPoint x="160" y="2700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="SBC11" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB5" target="SB_Break">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="160" y="2700" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="SBC12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB_Break" target="SB10" />
+    <mxCell id="SBC13" value="จริง" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="SB10" target="SB11" />
+    <mxCell id="SBC14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB11" target="SB12" />
+    <mxCell id="SBC15" value="เท็จ" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB10" target="SB12">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="165" y="3000" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="SBC16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="SB12" target="SB13" />
+  </root>
+</mxGraphModel>
