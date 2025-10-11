@@ -1,0 +1,226 @@
+<mxGraphModel dx="1800" dy="2000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="3000" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <!-- ============================================== -->
+    <!-- MAIN FLOWCHART: main() -->
+    <!-- ============================================== -->
+    <mxCell id="main_label" value="โปรแกรมหลัก (main)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="100" y="0" width="130" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="main_start" value="เริ่มต้น" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="110" y="30" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_declare" value="ประกาศตัวแปร word[MAX_SIZE]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="90" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_start" target="main_declare">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_output_prompt" value="แสดง &quot;Enter word:&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="100" y="160" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_declare" target="main_output_prompt">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_input_word" value="รับค่า word (ใช้ fgets)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="100" y="230" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_output_prompt" target="main_input_word">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_cond_fgets" value="รับค่า word สำเร็จ (&amp;#33;= NULL) ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="300" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_input_word" target="main_cond_fgets">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_process_remove_newline" value="ลบอักขระ '\n' ที่ท้าย word" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="390" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_5" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_fgets" target="main_process_remove_newline">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_return_error" value="คืนค่า 1 (เกิดข้อผิดพลาด)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="280" y="310" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_6" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="main_cond_fgets" target="main_return_error">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_call_func" value="เรียกใช้ isPalindrome(word)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="80" y="470" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_process_remove_newline" target="main_call_func">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_cond_result" value="ผลลัพธ์จาก isPalindrome เป็น True ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="540" width="180" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_call_func" target="main_cond_result">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_output_pass" value="แสดง &quot;Pass.&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="25" y="630" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_9a" value="จริง" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_result" target="main_output_pass">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="75" y="570" />
+          <mxPoint x="75" y="630" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_output_notpass" value="แสดง &quot;Not Pass.&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="195" y="630" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_9b" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_cond_result" target="main_output_notpass">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="245" y="570" />
+          <mxPoint x="245" y="630" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_return_success" value="คืนค่า 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="110" y="700" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_10a" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_output_pass" target="main_return_success">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="75" y="700" />
+          <mxPoint x="160" y="700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_flow_10b" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_output_notpass" target="main_return_success">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="245" y="700" />
+          <mxPoint x="160" y="700" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="main_stop" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="110" y="780" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_return_success" target="main_stop">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="main_flow_12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="main_return_error" target="main_stop">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="340" y="760" />
+          <mxPoint x="160" y="760" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- ============================================== -->
+    <!-- FUNCTION FLOWCHART: isPalindrome(str) -->
+    <!-- ============================================== -->
+    <mxCell id="func_label" value="ฟังก์ชัน: isPalindrome(str)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="600" y="0" width="150" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="func_start" value="เริ่มต้น (รับค่า str)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="615" y="30" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_proc_init" value="len = strlen(str)&#xa;left = 0, right = len - 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="580" y="90" width="190" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_start" target="func_proc_init">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_proc_copy" value="สร้าง lower_str&#xa;คัดลอก str ไป lower_str" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="580" y="160" width="190" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_proc_init" target="func_proc_copy">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_loop_convert_init" value="i = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="625" y="240" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_proc_copy" target="func_loop_convert_init">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_cond_convert" value="i &lt; len ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="625" y="310" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_loop_convert_init" target="func_cond_convert">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_proc_convert" value="lower_str[i] = tolower(lower_str[i])&#xa;i = i + 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="600" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_5" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_cond_convert" target="func_proc_convert">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="func_proc_convert" target="func_cond_convert">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="550" y="425" />
+          <mxPoint x="550" y="340" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_cond_palindrome" value="left &lt; right ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="780" y="310" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_7" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_cond_convert" target="func_cond_palindrome">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="780" y="340" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_return_true" value="คืนค่า True" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="910" y="320" width="90" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_8" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="func_cond_palindrome" target="func_return_true">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_cond_compare" value="lower_str[left] &#x9;!= &#xa;lower_str[right] ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="765" y="400" width="130" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_9" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_cond_palindrome" target="func_cond_compare">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_return_false" value="คืนค่า False" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="785" y="490" width="90" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_10" value="จริง" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_cond_compare" target="func_return_false">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="func_proc_increment" value="left++&#xa;right--" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="930" y="400" width="100" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_11" value="เท็จ" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_cond_compare" target="func_proc_increment">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="930" y="425" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_flow_12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="func_proc_increment" target="func_cond_palindrome">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1060" y="425" />
+          <mxPoint x="1060" y="280" />
+          <mxPoint x="830" y="280" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_stop" value="หยุด" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="785" y="580" width="90" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="func_flow_merge1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_return_true" target="func_stop">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="955" y="560" />
+          <mxPoint x="830" y="560" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="func_flow_merge2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="func_return_false" target="func_stop">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
